@@ -31,3 +31,17 @@ Hint: to be able to add on the fly more workers to the queue, I added this line:
 `ch.Qos(1, 0, true)`
 
 Typically you would add some preFetch, to be more efficient on the network part.
+
+## USe Case 2: Pub/Sub
+
+Good fit for notifications / events.
+
+To start the publisher:
+
+`go run ./pub-sub/publisher/publisher.go`
+
+To start the subscribers:
+
+`go run ./pub-sub/sub1/subscriber.go`
+
+`go run ./pub-sub/sub2/subscriber.go`
